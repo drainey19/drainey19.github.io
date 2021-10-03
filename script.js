@@ -17,3 +17,9 @@ function darkMode() {
     changeColor('#121212');
     changeTextColor('white');
 }
+
+// return style to the original style
+function original() {
+    changeColor('lightblue');
+    changeTextColor('black');
+}

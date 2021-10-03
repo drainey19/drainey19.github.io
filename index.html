@@ -4,15 +4,36 @@
     <link rel="stylesheet" href="style.css">
     <body>
         <script src="script.js"></script>
-        <h1>Dylan's Page/h1>
+        <header>
+            <h1>Dylan's Page</h1>
+        </header>
+        
+        <div class="topNav" id="myTopNav">
+            <div class="dropDown">
+                <button class="dropButton">Style</button>
+                <div class="dropDownContent">
+                    <a href="original()" onclick="original()">main Style</a>
+                    <a href="lightMode()" onclick="lightMode()">Flahbang!</a>
+                    <a href="darkMode()" onclick="darkMode()">Going Dark</a>
+                </div>
+            </div>
+            <a href="page2.html">Second page</a>
+            <a href="page3.html">Third page</a>
+        </div>
+<!--
+        <nav>
+            <button onclick="lightMode()">
+                Flashbang!
+            </button>
 
-        <button onclick="lightMode()">
-            Flashbang!
-        </button>
+            <button onclick="darkMode()">
+                Going dark
+            </button><br>
+        </nav>
+    -->
 
-        <button onclick="darkMode()">
-            Going dark
-        </button><br>
-        <a href="page2.html">page 2</a>
+        <main>
+            <p>add some thing about myself</p>
+        </main>
     </body>
 </html>
