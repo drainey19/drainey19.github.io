@@ -74,3 +74,16 @@ body {
 .dropDown:hover .dropDownContent {
     display: block;
 }
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    flex: 0 1 80%;
+}
+
+aside {
+    flex: 0 1 20%;
+}
