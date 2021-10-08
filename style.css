@@ -108,6 +108,7 @@ table, th, tr {
 
 main {
     flex: 0 1 80%;
+    text-align: center;
 }
 
 aside {
