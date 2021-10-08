@@ -1,15 +1,31 @@
 
 body {
-    text-align: center;
     background-color: lightblue;
 }
 
+header {
+    text-align: center;
+}
 
 ul {
     text-align: left;
 }
 
+#tableTitles {
+    font-size: 14pt;
+}
+
+#tableAnswers {
+    font-weight: lighter;
+    color: #121212;
+}
+
+#caption {
+    font-size: 15pt;
+}
+
 table, th, tr {
+    text-align: center;
     border: 1px inset;
 }
 
