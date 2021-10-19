@@ -1,3 +1,82 @@
 body {
     background-color: lightblue;
+    text-align: center;
+}
+
+.page-wrapper {
+    padding: 0 175px 0 110px;
+    margin: 0;
+    position: relative;
+    border: 2px inset red;
+}
+
+/* Group 1 */
+.intro {
+    min-width: 470px;
+    width: 100%;
+    border: 2px inset blue;
+}
+
+header {
+    border: 1px inset orange; 
+}
+
+.summary {
+    border: 1px inset yellow;
+}
+
+.preamble {
+    border: 1px inset red;
+}
+
+/* Group 2 */
+.supporting {
+    border: 2px inset green;
+    padding-left: 10px;
+    margin-bottom: 40px;
+}
+
+.explination {
+    border: 1px inset grey;
+}
+
+.participation {
+    border: 1px inset black;
+}
+
+.benifits {
+    border: 1px inset blue;
+}
+
+.requirements {
+    border: 1px inset red;
+}
+
+footer {
+    border: 1px inset magenta;
+}
+
+/* Group 3 */
+.sidebar {
+    border: 2px inset black;
+    margin-left: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrapper {
+    border: 1px inset green;
+}
+
+.design-selection {
+    border: 1px inset red;
+}
+
+.design-archives {
+    border: 1px inset blue;
+}
+
+.zen-resources {
+    border: 1px inset yellow;
 }
