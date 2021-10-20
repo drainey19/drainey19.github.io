@@ -5,7 +5,9 @@
 
 /*main elements*/
 body {
-    background: url(matrix.jpg);
+    background: url(matrix3.gif);
+    max-width: 100%;
+    height: auto;
     color: green;
 }
 
@@ -36,6 +38,7 @@ a {
 */
 h3 {
     font-size: 20pt;
+    font-family: matrixFont;
 }
 
 a:link {
@@ -44,6 +47,10 @@ a:link {
 
 a:visited {
     color: green;
+}
+
+a:hover {
+    color: red;
 }
 
 .page-wrapper {
@@ -64,7 +71,7 @@ header {
     background-color: black;
     /*margin-left: 175px;*/
     font-family: matrixFont;
-    font-size: larger;
+    font-size: 25pt;
 }
 
 header h2 {
@@ -94,10 +101,6 @@ header h2 {
 
 footer {
     text-align: center;
-}
-
-a:hover {
-    color: red;
 }
 
 /* Group 3 */
