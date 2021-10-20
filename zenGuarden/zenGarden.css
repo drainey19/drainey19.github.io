@@ -1,9 +1,15 @@
+@font-face {
+    font-family: matrixFont;
+    src: url(matrix.ttf);
+}
+
 /*main elements*/
 body {
     background: url(matrix.jpg);
     color: green;
 }
 
+/*
 p {
     background-color: black;
 }
@@ -27,6 +33,10 @@ li {
 a {
     background-color: black;
 }
+*/
+h3 {
+    font-size: 20pt;
+}
 
 a:link {
     color: green;
@@ -38,8 +48,9 @@ a:visited {
 
 .page-wrapper {
     /*padding: 0 175px 0 110px;*/
-    margin: 0;
+    margin: 100px;
     position: relative;
+    background-color: black;
 }
 
 /* Group 1 */
@@ -49,21 +60,24 @@ a:visited {
 }
 
 header {
-    padding-top: 20px;
-	height: 87px;
-    padding-bottom: 20px;
+    padding: 20px 0 0 20px;
     background-color: black;
-    margin-right: 1500px;
+    /*margin-left: 175px;*/
+    font-family: matrixFont;
+    font-size: larger;
+}
+
+header h2 {
+    margin-left: 50px;
 }
 
 .summary {
     clear: both; 
 	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
+	/*float: left;*/
     margin-top: 80px;
 	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .preamble {
@@ -76,7 +90,6 @@ header {
     padding-left: 10px;
     margin-bottom: 40px;
     margin-right: 175px;
-    margin-left: 175px;
 }
 
 footer {
