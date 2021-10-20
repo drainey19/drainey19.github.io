@@ -1,82 +1,62 @@
 body {
     background-color: lightblue;
-    text-align: center;
 }
 
 .page-wrapper {
-    padding: 0 175px 0 110px;
+    /*padding: 0 175px 0 110px;*/
     margin: 0;
     position: relative;
-    border: 2px inset red;
 }
 
 /* Group 1 */
 .intro {
     min-width: 470px;
     width: 100%;
-    border: 2px inset blue;
 }
 
 header {
-    border: 1px inset orange; 
+    padding-top: 20px;
+	height: 87px;
+    padding-bottom: 20px;
 }
 
 .summary {
-    border: 1px inset yellow;
+    clear: both; 
+	margin: 20px 20px 20px 10px; 
+	width: 160px; 
+	float: left;
+    margin-top: 80px;
+	font: italic 1.1em/2.2 georgia; 
+	text-align: center;
 }
 
 .preamble {
-    border: 1px inset red;
+    /*clear: right; */
+	padding: 0px 10px 0 10px;
 }
 
 /* Group 2 */
 .supporting {
-    border: 2px inset green;
     padding-left: 10px;
     margin-bottom: 40px;
-}
-
-.explination {
-    border: 1px inset grey;
-}
-
-.participation {
-    border: 1px inset black;
-}
-
-.benifits {
-    border: 1px inset blue;
-}
-
-.requirements {
-    border: 1px inset red;
+    margin-right: 175px;
+    margin-left: 175px;
 }
 
 footer {
-    border: 1px inset magenta;
+    text-align: center;
 }
 
 /* Group 3 */
 .sidebar {
-    border: 2px inset black;
     margin-left: 600px;
     position: absolute;
-    top: 0;
+    top: 100px;
     right: 0;
 }
 
-.wrapper {
-    border: 1px inset green;
-}
-
-.design-selection {
-    border: 1px inset red;
-}
-
-.design-archives {
-    border: 1px inset blue;
-}
-
-.zen-resources {
-    border: 1px inset yellow;
+.sidebar .wrapper { 
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 160px; 
 }
