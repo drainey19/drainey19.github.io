@@ -1,5 +1,39 @@
+/*main elements*/
 body {
-    background-color: lightblue;
+    background: url(matrix.jpg);
+    color: green;
+}
+
+p {
+    background-color: black;
+}
+
+h1 {
+    background-color: black;
+}
+
+h2 {
+    background-color: black;
+}
+
+h3 {
+    background-color: black;
+}
+
+li {
+    background-color: black;
+}
+
+a {
+    background-color: black;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: green;
 }
 
 .page-wrapper {
@@ -18,6 +52,8 @@ header {
     padding-top: 20px;
 	height: 87px;
     padding-bottom: 20px;
+    background-color: black;
+    margin-right: 1500px;
 }
 
 .summary {
@@ -45,6 +81,10 @@ header {
 
 footer {
     text-align: center;
+}
+
+a:hover {
+    color: red;
 }
 
 /* Group 3 */
