@@ -3,6 +3,11 @@
     src: url(matrix2.ttf);
 }
 
+@font-face {
+    font-family: matrixCode;
+    src: url(matrixCode.otf);
+}
+
 /*main elements*/
 body {
     background: url(matrix3.gif);
@@ -17,11 +22,12 @@ h3 {
 }
 
 p {
-    font-family: monospace;
+    font-family: matrixCode;
 }
 
 p:hover {
-    color: blue;
+    color: white;
+    font-family: monospace;
 }
 
 a:link {
