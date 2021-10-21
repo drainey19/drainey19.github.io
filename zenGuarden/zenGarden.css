@@ -17,7 +17,11 @@ h3 {
 }
 
 p {
-    font-family: 'Courier New', Courier, monospacegiot;
+    font-family: monospace;
+}
+
+p:hover {
+    color: blue;
 }
 
 a:link {
