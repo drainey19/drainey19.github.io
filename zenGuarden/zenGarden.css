@@ -49,7 +49,6 @@ a:hover {
 }
 
 .page-wrapper {
-    /*padding: 0 175px 0 110px;*/
     margin: 100px;
     position: relative;
     background-color: black;
@@ -64,7 +63,6 @@ a:hover {
 header {
     padding: 20px 0 0 20px;
     background-color: black;
-    /*margin-left: 175px;*/
     font-family: matrixFont;
     font-size: 25pt;
 }
@@ -75,15 +73,11 @@ header h2 {
 }
 
 .summary {
-    clear: both; 
 	margin: 20px 500px 20px 10px; 
-	/*float: left;*/
     margin-top: 80px; 
-	/*text-align: center;*/
 }
 
 .preamble {
-    /*clear: right; */
 	padding: 0px 10px 0 10px;
 }
 
