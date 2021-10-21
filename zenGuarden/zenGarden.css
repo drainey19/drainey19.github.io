@@ -18,6 +18,10 @@ body {
 
 h3 {
     font-size: 20pt;
+    font-family: matrixcode;
+}
+
+h3:hover {
     font-family: matrixFont;
 }
 
@@ -27,11 +31,12 @@ p {
 
 p:hover {
     color: white;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a:link {
     color: green;
+    font-family: matrixCode;
 }
 
 a:visited {
@@ -39,7 +44,8 @@ a:visited {
 }
 
 a:hover {
-    color: blue;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .page-wrapper {
@@ -72,8 +78,7 @@ header h2 {
     clear: both; 
 	margin: 20px 500px 20px 10px; 
 	/*float: left;*/
-    margin-top: 80px;
-	font: italic 1.1em/2.2 georgia; 
+    margin-top: 80px; 
 	/*text-align: center;*/
 }
 
