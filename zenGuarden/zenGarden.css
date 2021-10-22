@@ -8,6 +8,16 @@
     src: url(matrixCode.otf);
 }
 
+@keyframes move {
+    from { left:0px; top:-300px; }
+    to { left:0px; top:0px }
+}
+
+@keyframes move2 {
+    from { left:0px; top:-300px; }
+    to { left:0px; top:0px; }
+}
+
 /*main elements*/
 body {
     background: url(matrix3.gif);
@@ -61,20 +71,32 @@ a:hover {
 }
 
 header {
-    padding: 20px 0 0 20px;
-    background-color: black;
+    /*padding: 20px 0 0 20px;*/
     font-family: matrixFont;
     font-size: 25pt;
+
+
 }
 
+header h1 {
+    padding: 20px 0 0 20px;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 3s;
+}
 
 header h2 {
     margin-left: 50px;
+    padding: 100px 0 0 20px;
+    position: absolute;
+    animation-name: move2;
+    animation-duration: 2s;
 }
 
 .summary {
 	margin: 20px 500px 20px 10px; 
-    margin-top: 80px; 
+    margin-top: 80px;
+    padding-top: 250px; 
 }
 
 .preamble {
