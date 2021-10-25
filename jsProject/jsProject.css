@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+
+header {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    flex: 0 1 80%;
+    text-align: center;
+    border: 2px inset red;
+}
+
+aside {
+    flex: 0 1 20%;
+    border: 2px inset red;
+}

@@ -22,3 +22,6 @@ aside {
     text-align: center;
 }
 
+button:hover {
+    background-color: gray;
+}
