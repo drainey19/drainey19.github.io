@@ -6,3 +6,17 @@ header {
     text-align: center;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    flex: 0 1 50%;
+    text-align: center;
+}
+
+aside {
+    flex: 0 1 50%;
+    text-align: center;
+}
