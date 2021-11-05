@@ -7,7 +7,8 @@ function changeTextColor(color2) {
 }
 
 function original() {
-
+    changeColor('lightblue');
+    changeTextColor('black');
 }
 
 function lightMode() {
@@ -19,3 +20,5 @@ function darkMode() {
     changeColor('#121212');
     changeTextColor('white');
 }
+
+// music facts
