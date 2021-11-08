@@ -1,3 +1,4 @@
+// change page theme
 function changeColor(color) {
     document.body.style.background = color;
 }
@@ -21,23 +22,32 @@ function darkMode() {
     changeTextColor('white');
 }
 
-// song lyrics
-
+// display song lyrics
 function findLyrics () {
     $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value + "/" + 
     document.getElementById("title").value,
     function(data) {
         console.log(data);
         document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
-    })
+    });
+    // display song title
+    let songTitle = document.querySelector("h3");
+    songTitle.innerHTML = document.getElementById("title").value;
+
+    // display song artist
+    let songArtist = document.querySelector("h4");
+    songArtist.innerHTML = ("By ") + document.getElementById("artist").value;
 }
 
-function displaySongTitle() {
+// display song title and artist
+//document.getElementById("artist").addEventListener("click", displaySongTitle);
+//function displaySongTitle() {
     //let songTitle = document.getElementById("artist").value;
     //let songArtist = document.getElementById("title").value;
-    document.getElementById("songTitle").innerHTML = document.getElementById("title").value;
-    document.getElementById("songArtist").innerHTML = document.getElementById("artist").value;
-}
+    //document.getElementById("songTitle").innerHTML = document.getElementById("title").value;
+    //document.getElementById("songArtist").innerHTML = document.getElementById("artist").value;
+    
+//}
 
 /*
 function findLyrics() {
