@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="jsproject.css">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="jsproject.css">
+    </head>
     <body>
-        <script src="jsProject.js"></script>
         <header>
             <h1>JS Project</h1>
         </header>
@@ -20,11 +21,22 @@
 
         <div id="container">
             <main>
-                <p>test</p>
+                <h2>Music</h2>
+                <!--
+                <input type="text">
+                <input type="button" value="Enter">
+                -->
+                
+                <input id="title"> by <input id="artist">
+                <button onclick="findLyrics()">Submit</button>
+                <div id="output"></div>
+            
             </main>
             <aside>
-                <p>test</p>
+                <p></p>
             </aside>
         </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jsProject.js"></script>
 </html> 
