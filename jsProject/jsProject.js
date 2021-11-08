@@ -28,8 +28,15 @@ function findLyrics () {
     document.getElementById("title").value,
     function(data) {
         console.log(data);
-        document.getElementById("output").innerHTML=data.lyrics.replace(new RegExp("\n", "g"), "<br>");
+        document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
     })
+}
+
+function displaySongTitle() {
+    //let songTitle = document.getElementById("artist").value;
+    //let songArtist = document.getElementById("title").value;
+    document.getElementById("songTitle").innerHTML = document.getElementById("title").value;
+    document.getElementById("songArtist").innerHTML = document.getElementById("artist").value;
 }
 
 /*
