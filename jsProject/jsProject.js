@@ -58,7 +58,7 @@ function findLyrics() {
         dataType: "json"
     }).done(function(data) {
         
-        document.getElementById("output").innerHTML=data.lyrics.replace(new RegExp("\n", "g"), "<br>");
+        document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
     });
 }
 */
