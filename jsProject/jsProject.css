@@ -1,9 +1,27 @@
-body {
-    
+@font-face {
+    font-family: posterFont;
+    src: url(postersItalicFont.ttf);
 }
+
+body {
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("guitar.jpg");
+    background-repeat: no-repea;
+    background-attachment: fixed;
+    color: white;
+}
+
 /*add music font*/
 header {
     text-align: center;
+}
+
+header, h2 {
+    font-family: posterFont;
 }
 
 #container {
@@ -20,9 +38,13 @@ aside {
     flex: 0 1 20%;
 }
 
+#output {
+    font-weight: bolder;
+}
+
 /*navigation bar*/
 .topNav {
-    background-color: gray;
+    background-image: url("bgNavBar.jpg");
     overflow: hidden;
 }
 

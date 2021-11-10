@@ -4,26 +4,34 @@ function changeColor(color) {
 }
 
 function changeTextColor(color2) {
-    docuument.body.style.color = color2;
+    document.body.style.color = color2;
 }
 
-function original() {
-    changeColor('lightblue');
-    changeTextColor('black');
+function changeBackgroundImage(image) {
+    document.body.style.backgroundImage = image;
 }
 
+// function to turn background to white
 function lightMode() {
     changeColor('white');
     changeTextColor('black');
 }
 
+// creates a function to turn background to dark grey
 function darkMode() {
     changeColor('#121212');
     changeTextColor('white');
 }
 
+// return style to the original style
+function original() {
+    changeBackgroundImage("url(guitar.jpg)");
+    changeTextColor('white');
+}
+
 // display song lyrics
-function findLyrics () {
+
+function findLyrics() {
     $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value + "/" + 
     document.getElementById("title").value,
     function(data) {
@@ -39,25 +47,16 @@ function findLyrics () {
     songArtist.innerHTML = ("By ") + document.getElementById("artist").value;
 }
 
-// display song title and artist
-//document.getElementById("artist").addEventListener("click", displaySongTitle);
-//function displaySongTitle() {
-    //let songTitle = document.getElementById("artist").value;
-    //let songArtist = document.getElementById("title").value;
-    //document.getElementById("songTitle").innerHTML = document.getElementById("title").value;
-    //document.getElementById("songArtist").innerHTML = document.getElementById("artist").value;
-    
-//}
-
 /*
 function findLyrics() {
     let requestData = document.getElementById("artist").value + "/" + document.getElementById("title").value;
+
     $.ajax({
         url: "https://api.lyrics.ovh/v1/",
         method: "GET",
         data: requestData,
-    })
-    .done(function(data) {
+        dataType: "json"
+    }).done(function(data) {
         
         document.getElementById("output").innerHTML=data.lyrics.replace(new RegExp("\n", "g"), "<br>");
     });
