@@ -49,7 +49,8 @@ function findLyrics() {
 
 /*
 function findLyrics() {
-    let requestData = document.getElementById("artist").value + "/" + document.getElementById("title").value;
+    // let requestData = document.getElementById("artist").val() + "/" + document.getElementById("title").val();
+    let requestData = $("#artist").val() + "/" + $("#title").val();
 
     $.ajax({
         url: "https://api.lyrics.ovh/v1/",
