@@ -6,6 +6,7 @@
     </head>
     <body>
         <nav class="topNav" id="topNav">
+            <img src="notesSearch.png" alt="" height="45px">
             <div class="dropDown">
                 <button class="dropButton">Themes</button>
                 <div class="dropDownContent">
@@ -26,7 +27,7 @@
                 -->
                 
                 <input id="title" placeholder="Enter song title"> by <input id="artist" placeholder="Enter song artist">
-                <button onclick="findLyrics()">Submit</button>
+                <button id="searchBTN" onclick="findLyrics()"><img src="music.png" alt="search" height="20px"></button>
                 <h3 id="songTitle"></h3>
                 <h4 id="songArtist"></h4>
                 <p id="working" style="display: none;">Looking for song lyrics</p>
