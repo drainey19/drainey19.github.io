@@ -56,7 +56,7 @@ aside {
     border-radius: 50%;
 }
 
-/*navigation bar*/
+/*navigation bar design based off of GeeksforGeeks*/
 .topNav {
     background-image: url("bgNavBar.jpg");
     background-image: urrl("notes.png");

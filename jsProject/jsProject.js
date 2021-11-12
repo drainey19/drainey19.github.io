@@ -34,6 +34,8 @@ function original() {
     changeTextColor('white');
 }
 
+
+
 // display song lyrics
 $("#artist").keypress(findLyrics);
 function findLyrics() {
@@ -61,19 +63,3 @@ function findLyrics() {
     let songArtist = document.querySelector("h3");
     songArtist.innerHTML = ("By ") + document.getElementById("artist").value;
 }
-
-/*
-function findLyrics() {
-    // let requestData = document.getElementById("artist").val() + "/" + document.getElementById("title").val();
-    let requestData = $("#artist").val() + "/" + $("#title").val();
-
-    $.ajax({
-        url: "https://api.lyrics.ovh/v1/",
-        method: "GET",
-        data: requestData
-    }).done(function(data) {
-        
-        document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
-    });
-}
-*/
