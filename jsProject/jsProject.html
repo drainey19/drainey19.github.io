@@ -6,7 +6,6 @@
     </head>
     <body>
         <nav class="topNav" id="topNav">
-            <img src="notesSearch.png" alt="" height="45px">
             <div class="dropDown">
                 <button class="dropButton">Themes</button>
                 <div class="dropDownContent">
@@ -21,9 +20,9 @@
         <div id="container">
             <main>
                 <h1>
-                    <img class="animation" src="musicNote.png" height="35px">
+                    <img id="musicNote" class="animation" src="musicNoteWhite.png" height="35px">
                     Song lyrics
-                    <img class="animation" src="musicNote.png" height="35px">
+                    <img id="musicNote" class="animation" src="musicNoteWhite.png" height="35px">
                 </h1>
                 <!--
                 <input type="text">
@@ -32,18 +31,18 @@
                 
                 <input id="title" placeholder="Enter song title"> by <input id="artist" placeholder="Enter song artist">
                 <button id="searchBTN" onclick="findLyrics()"><img src="music.png" alt="search" height="20px"></button>
-                <h3 id="songTitle"></h3>
-                <h4 id="songArtist"></h4>
-                <p id="working" style="display: none;">Looking for song lyrics</p>
+
+                <h2 id="songTitle"></h2>
+                <h3 id="songArtist"></h3>
+                <p id="searching" style="display: none;">Looking for song lyrics...</p>
+                <p id="error"></p>
                 <div id="output" style="display: none;"></div>
             
             </main>
             <aside>
-                <p></p>
+                
             </aside>
         </div>
-        <footer>
-        </footer>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jsProject.js"></script>
