@@ -34,10 +34,15 @@ function original() {
     changeTextColor('white');
 }
 
-
+// used code from "https://howtodoinjava.com/jquery/jquery-detect-if-enter-key-is-pressed/""
+$('#artist').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        findLyrics();  
+    }
+});
 
 // display song lyrics
-$("#artist").keypress(findLyrics);
 function findLyrics() {
     $("#output").hide();
     $("#songTitle").hide();
@@ -54,6 +59,9 @@ function findLyrics() {
         $("#songArtist").show();
         $("#output").show();
         document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
+    }).fail(function(jqXHR) {
+        $("#searching").hide();
+        $("#error").html("Unable to find lyrcs. Please try again.");
     });
     // display song title
     let songTitle = document.querySelector("h2");
