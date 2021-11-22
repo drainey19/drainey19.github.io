@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
-    </header>
+    <link rel="stylesheet" href="finalStyle.css">
     <body>
-        <h1>hello world</h1>
+        <h1>Games</h1>
+        <div id="gameList">
+            <ul>
+                <li>
+                    <button onclick="playOregonTrail()">Oregon Trail</button>
+                </li>
+                <li>
+                    <button onClick="playSnakeGame()">Snake Game</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="allGames">
+            <div id="oregonTrail" style="display: none;">
+                <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
+            </div>
+
+            <div id="snakeGame" style="display: none;">
+                <p>Test</p>
+            </div>
+        </div>
     </body>
+    <script src="finalScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>
