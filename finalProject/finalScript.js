@@ -12,6 +12,21 @@ function playSnakeGame() {
 
 // snake game
 
+// create board
+
+// create snake starting cordinates
+
+// function to draw the snake parts
+
+// function to draw the snake
+
+// make snake move automatically
+
 
 
 // api
+    // playing card api make blackjack
+
+// call api
+
+// use api to play blackjack
