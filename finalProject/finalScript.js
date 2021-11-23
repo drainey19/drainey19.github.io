@@ -2,15 +2,18 @@
 // add functions to show the games 
 function playOregonTrail() {
     $("#snakeGame").hide();
+    $("#blackjack").hide();
     $("#oregonTrail").show();
 }
 
+// snake game
 function playSnakeGame() {
     $("#oregonTrail").hide();
+    $("#blackjack").hide();
     $("#snakeGame").show();
 }
 
-// snake game
+/*
 // draw bord
 const boardBackground = 'white';
 const boardBorder = 'black';
@@ -55,12 +58,23 @@ function drawSnakePart(snakePart) {
 }
 
 // make snake move automatically
-
-
+*/
 
 // api
     // playing card api make blackjack
+function playBlackjack() {
+    $("#snakeGame").hide();
+    $("#oregonTrail").hide();
+    $("#blackjack").show();
 
+    $.ajax({
+        url: "http://deckofcardsapi.com/api/",
+        method: "GET",
+        data: {
+
+        }
+    })
+}
 // call api
 
 // use api to play blackjack

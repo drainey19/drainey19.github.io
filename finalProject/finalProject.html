@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan's Archade</title>
     <link rel="stylesheet" href="finalStyle.css">
-    <body>
-        <h1>Games</h1>
-        <div id="gameList">
-            <ul>
-                <li>
-                    <button onclick="playOregonTrail()">Oregon Trail</button>
-                </li>
-                <li>
-                    <button onClick="playSnakeGame()">Snake Game</button>
-                </li>
-            </ul>
-        </div>
+</head>
+<header>
+    <h1>Dylan's Arcade</h1>
+</header>
+<body>
+    <div id="screen">
+        <!--<img id="gameScreen" src="screen.jpg" height="560" width="675">-->
+        <!--<img src="sunRise.jpg" height="450" width="560">-->
+        <main id="mainSection">
+            <div id="allGames">
+                <!--oregon trail game-->
+                <div id="oregonTrail" style="display: none;">
+                    <h2>Oregon Trail</h2>
+                    <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
+                </div>
 
-        <div id="allGames">
-            <div id="oregonTrail" style="display: none;">
-                <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
+                <!--snake game-->
+                <div id="snakeGame" style="display: none;">
+                    <h2>Snake Game</h2>
+                    <canvas id="snakeCanvas" height="500" width="500">
+
+                    </canvas>
+                </div>
+
+                <!--blackjack-->
+                <div id="blackjack" style="display: none;">
+                    <h2>Blackjack</h2>
+                </div>
             </div>
+        </main>
 
-            <div id="snakeGame" style="display: none;">
-                <canvas id="snakeCanvas" height="500" width="500">
-
-                </canvas>
+        <nav>
+            <h2>Game list</h2>
+            <div id="gameList">
+                <ul>
+                    <li>
+                        <button onclick="playOregonTrail()">Oregon Trail</button>
+                    </li>
+                    <li>
+                        <button onClick="playSnakeGame()">Snake Game</button>
+                    </li>
+                    <li>
+                        <button onclick="playBlackjack()">Blackjack</button>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </body>
-    <script src="finalScript.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        </nav>
+    </div>
+</body>
+<script src="finalScript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>
