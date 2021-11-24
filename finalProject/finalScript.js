@@ -1,8 +1,17 @@
+// function to snow games
+function gameList() {
+    $("#displayGameList").show();
+    $("#snakeGame").hide();
+    $("#blackjack").hide();
+    $("#oregonTrail").hide();
+    $("#pressStart").hide();
+}
 
 // add functions to show the games 
 function playOregonTrail() {
     $("#snakeGame").hide();
     $("#blackjack").hide();
+    $("#displayGameList").hide();
     $("#oregonTrail").show();
 }
 
@@ -10,6 +19,7 @@ function playOregonTrail() {
 function playSnakeGame() {
     $("#oregonTrail").hide();
     $("#blackjack").hide();
+    $("#displayGameList").hide();
     $("#snakeGame").show();
 }
 
@@ -65,6 +75,7 @@ function drawSnakePart(snakePart) {
 function playBlackjack() {
     $("#snakeGame").hide();
     $("#oregonTrail").hide();
+    $("#displayGameList").hide();
     $("#blackjack").show();
 
     $.ajax({

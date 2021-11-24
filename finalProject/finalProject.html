@@ -13,7 +13,11 @@
         <div id="title">
             <div id="container1">
                 <p id="blankSpace"></p>
-                <h1 id="name">Dylan's Arcade</h1>
+                <h1 id="name">
+                    <img src="wagon.png" id="wagon" height="75px">
+                    Dylan's Arcade
+                    <img src="snake.png" id="snakePic" height="75px">
+                </h1>
                 <p id="blankSpace"></p>
             </div>
         </div>
@@ -22,33 +26,33 @@
             <div id="container2">
                 <p id="blankSpace"></p>
                 <div id="games">
-                    <div id="intro">
-                        <p id="insertCoin" style="display: none;">Insert Coin</p>
-                    </div>
+                    <div id="blankScreen">
+                        <div id="intro">
+                            <div id="pressStart"><p id="start">PRESS START</p></div>
+                        </div>
 
-                    <div id="oregonTrail" style="display: none;">
-                        <h2>Oregon Trail</h2>
-                        <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
-                    </div>
-    
-                    
-                    <div id="snakeGame" style="display: none;">
-                        <h2>Snake Game</h2>
-                        <canvas id="snakeCanvas" height="450" width="560">
-    
-                        </canvas>
-                    </div>
-                    
-                    <div id="blackjack" style="display: none;">
-                        <h2>Blackjack</h2>
-                    </div>
+                        <div id="oregonTrail" style="display: none;">
+                            <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
+                        </div>
+        
+                        
+                        <div id="snakeGame" style="display: none;">
+                            <canvas id="snakeCanvas" height="450" width="560">
+        
+                            </canvas>
+                        </div>
+                        
+                        <div id="blackjack" style="display: none;">
+                            <h2>Blackjack</h2>
+                        </div>
 
-                    <div style="display: none;">
-                        <h2>Pick a Game</h2>
-                        <div id="gameList">
-                            <button onclick="playOregonTrail()">Oregon Trail</button>
-                            <button onClick="playSnakeGame()">Snake Game</button>
-                            <button onclick="playBlackjack()">Blackjack</button>
+                        <div id="displayGameList" style="display: none;">
+                            <h2>Select a Game</h2>
+                            <div id="gameList">
+                                <button onclick="playOregonTrail()">Oregon Trail</button><br>
+                                <button onClick="playSnakeGame()">Snake Game</button><br>
+                                <button onclick="playBlackjack()">Blackjack</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,6 +64,13 @@
                 <p id="blankSpace"></p>
                 <div id="coin">
                     <img id="joyStick" src="joystickRed.png">
+                    <button onclick="gameList()" id="startBTN">
+                        <p></p>
+                        <p> </p>
+                        START
+                        <p></p>
+                        <p></p>
+                    </button>
                 </div>
                 <p id="blankSpace"></p>
             </div>
@@ -70,41 +81,3 @@
 <script src="finalScript.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>
-
-<!--
-        <div id="screen">
-        <img id="gameScreen" src="screen.jpg" height="560" width="675">
-        <img src="sunRise.jpg" height="450" width="560">
-        <main id="mainSection">
-            <div id="allGames">
-                
-                <div id="oregonTrail" style="display: none;">
-                    <h2>Oregon Trail</h2>
-                    <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="450" width="560">
-                </div>
-
-                
-                <div id="snakeGame" style="display: none;">
-                    <h2>Snake Game</h2>
-                    <canvas id="snakeCanvas" height="500" width="500">
-
-                    </canvas>
-                </div>
-
-                
-                <div id="blackjack" style="display: none;">
-                    <h2>Blackjack</h2>
-                </div>
-            </div>
-
-            <nav>
-                <h2>Pick a Game</h2>
-                <div id="gameList">
-                    <button onclick="playOregonTrail()">Oregon Trail</button>
-                    <button onClick="playSnakeGame()">Snake Game</button>
-                    <button onclick="playBlackjack()">Blackjack</button>
-                </div>
-            </nav>
-        </main>
-    </div>
--->

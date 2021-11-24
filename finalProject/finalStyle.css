@@ -2,6 +2,12 @@
     font-family: arcade;
     src: url(BarcadeFont.otf);
 }
+
+@font-face {
+    font-family: pressStart;
+    src: url(PressStart2P.ttf);
+}
+
 body {
     background-image: 
     linear-gradient(
@@ -57,9 +63,15 @@ body {
 #name {
     flex: 0 1 50%;
     font-family: arcade;
+    font-size: 45pt;
     text-align: center;
     background-color: black;
     color: white;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 0%;
+    margin: 0%;
+    padding-bottom: 5px;
 }
 
 /*game*/
@@ -77,6 +89,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 950px 550px;
+}
+
+#blankScreen {
+    background-color: #121212;
+    max-width: 800px;
+    margin-left: 75px;
 }
 
 /*box*/
@@ -97,34 +115,55 @@ body {
 }
 
 /*other stuff*/
-
-
-/*
-#gameScreen {
-    z-index: 1;
+#startBTN {
+    background-color: red;
+    float: right;
+    margin-top: 135px;
+    margin-right: 135px;
+    border-radius: 50%;
+    font-family: pressStart;
+    color: white;
+    height: 80px;
+    width: 80px;
 }
 
-main {
-    z-index: 2;
+#pressStart {
+    background-color: #121212;
+    max-width: 800px;
+    min-height: 450px;
+    margin-left: 75px;
+    margin-top: 50px;
+    font-family: pressStart;
+    border-radius: 8px;
 }
 
-nav {
-    z-index: 3;
-}
-*/
-
-/*
-#container {
-    display: flex;
-    flex-direction: row;
-}
-
-main {
-    flex: 0 1 80%;
+#start {
     text-align: center;
+    vertical-align: middle;
 }
 
-aside {
-    flex: 0 1 20%;
+#displayGameList, #blackjack, #snakeGame, #oregonTrail {
+    background-color: #121212;
+    max-width: 800px;
+    min-height: 450px;
+    margin-left: 75px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 8px;
 }
-*/
+
+#displayGameList, button {
+    font-family: pressStart;
+}
+
+#wagon {
+    float: left;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+#snakePic {
+    float: right;
+    padding-top: 5px;
+    padding-right: 15px;
+}
