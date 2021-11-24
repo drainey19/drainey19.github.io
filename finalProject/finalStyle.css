@@ -1,7 +1,7 @@
-header {
-    text-align: center;
+@font-face {
+    font-family: arcade;
+    src: url(BarcadeFont.otf);
 }
-
 body {
     background-image: 
     linear-gradient(
@@ -25,6 +25,79 @@ body {
     border:2px solid red;
     height: 560px;
 }
+
+/*main*/
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    flex: 0 1 10%;
+}
+
+#gameSpace {
+    flex: 0 1 30%;
+}
+
+#gameBody {
+    flex: 0 1 60%;
+}
+
+/*title*/
+#container1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#blankSpace {
+    flex: 0 1 25%;
+}
+
+#name {
+    flex: 0 1 50%;
+    font-family: arcade;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+/*game*/
+#container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#games {
+    flex: 0 1 50%;
+    text-align: center;
+    min-height: 550px;
+    max-height: 550px;
+    background-image: url("screen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 950px 550px;
+}
+
+/*box*/
+#container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+#coin {
+    flex: 0 1 50%;
+    min-height: 320px;
+    max-width: 950px;
+    background-color: black;
+}
+
+#joyStick {
+    max-width: 550px;
+}
+
+/*other stuff*/
+
 
 /*
 #gameScreen {
