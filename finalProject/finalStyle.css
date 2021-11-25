@@ -126,15 +126,13 @@ body {
 #pressStart {
     /*background-color: #121212;*/
     max-width: 800px;
-    min-height: 450px;
-    
-    
+    min-height: 475px;
     font-family: pressStart;
 }
 
 #start {
     text-align: center;
-    
+    padding: 200px;
 }
 
 #displayGameList, #blackjack, #snakeGame, #oregonTrail {
