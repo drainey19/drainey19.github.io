@@ -27,7 +27,7 @@ body {
     background-image: url("screen.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 680px;
+    background-size: 100%;
     border:2px solid red;
     height: 560px;
 }
@@ -57,11 +57,12 @@ body {
 }
 
 #blankSpace {
-    flex: 0 1 25%;
+    flex: 0 1 30%;
+    background-color: cadetblue;
 }
 
 #name {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     font-family: arcade;
     font-size: 45pt;
     text-align: center;
@@ -81,14 +82,17 @@ body {
 }
 
 #games {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     text-align: center;
+    /*
     min-height: 550px;
     max-height: 550px;
+    */
     background-image: url("screen.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 950px 550px;
+    /*background-size: 950px 550px;*/
+    border: 2px solid red;
 }
 
 #blankScreen {
@@ -104,7 +108,7 @@ body {
 }
 
 #coin {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     min-height: 320px;
     max-width: 950px;
     background-color: black;
@@ -167,3 +171,170 @@ body {
     padding-top: 5px;
     padding-right: 15px;
 }
+
+/*
+@font-face {
+    font-family: arcade;
+    src: url(BarcadeFont.otf);
+}
+
+@font-face {
+    font-family: pressStart;
+    src: url(PressStart2P.ttf);
+}
+
+body {
+    background-image: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+    ),
+    url("pinkBlueLines.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    color: white;
+    
+}
+
+#screen {
+    text-align: center;
+    background-image: url("screen.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border:2px solid red;
+    height: 560px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    flex: 0 1 10%;
+}
+
+#gameSpace {
+    flex: 0 1 30%;
+}
+
+#gameBody {
+    flex: 0 1 60%;
+}
+
+#container1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#blankSpace {
+    flex: 0 1 25%;
+}
+
+#name {
+    flex: 0 1 50%;
+    font-family: arcade;
+    font-size: 45pt;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 0%;
+    margin: 0%;
+    padding-bottom: 5px;
+}
+
+#container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#games {
+    flex: 0 1 50%;
+    text-align: center;
+    min-height: 550px;
+    max-height: 550px;
+    background-image: url("screen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 950px 550px;
+}
+
+#blankScreen {
+    background-color: #121212;
+    max-width: 800px;
+    margin-left: 75px;
+}
+
+#container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+#coin {
+    flex: 0 1 50%;
+    min-height: 320px;
+    max-width: 950px;
+    background-color: black;
+}
+
+#joyStick {
+    max-width: 550px;
+}
+
+#startBTN {
+    background-color: red;
+    float: right;
+    margin-top: 135px;
+    margin-right: 135px;
+    border-radius: 50%;
+    font-family: pressStart;
+    color: white;
+    height: 80px;
+    width: 80px;
+}
+
+#pressStart {
+    background-color: #121212;
+    max-width: 800px;
+    min-height: 450px;
+    margin-left: 75px;
+    margin-top: 50px;
+    font-family: pressStart;
+    border-radius: 8px;
+}
+
+#start {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#displayGameList, #blackjack, #snakeGame, #oregonTrail {
+    background-color: #121212;
+    max-width: 800px;
+    min-height: 450px;
+    margin-left: 75px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#displayGameList, button {
+    font-family: pressStart;
+}
+
+#wagon {
+    float: left;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+#snakePic {
+    float: right;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+*/
