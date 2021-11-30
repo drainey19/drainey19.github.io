@@ -1,26 +1,56 @@
-// function to snow games
+// function to show games
 function gameList() {
     $("#displayGameList").show();
     $("#snakeGame").hide();
     $("#blackjack").hide();
     $("#oregonTrail").hide();
+    $("#minesweeper").hide();
     $("#pressStart").hide();
 }
 
-// add functions to show the games 
+// play oregin trail game
 function playOregonTrail() {
     $("#snakeGame").hide();
     $("#blackjack").hide();
     $("#displayGameList").hide();
+    $("#minesweeper").hide();
     $("#oregonTrail").show();
 }
 
-// snake game
+// play snake game
 function playSnakeGame() {
     $("#oregonTrail").hide();
     $("#blackjack").hide();
     $("#displayGameList").hide();
+    $("#minesweeper").hide();
     $("#snakeGame").show();
+}
+
+//play minesweeper
+function playMinesweeper() {
+    $("#oregonTrail").hide();
+    $("#blackjack").hide();
+    $("#displayGameList").hide();
+    $("#snakeGmae").hide();
+    $("#minesweeper").show();
+}
+
+// minesweeper api
+function minesweeper() {
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://minesweeper1.p.rapidapi.com/boards/new?r=1&c=1&bombs=1",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "minesweeper1.p.rapidapi.com",
+            "x-rapidapi-key": "ab6c19b129mshcacc10d5ea76639p14eb4fjsnb031d725f462"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
 }
 
 /*
@@ -71,7 +101,8 @@ function drawSnakePart(snakePart) {
 */
 
 // api
-    // playing card api make blackjack
+// playing card api make blackjack
+/*
 function playBlackjack() {
     $("#snakeGame").hide();
     $("#oregonTrail").hide();
@@ -86,6 +117,7 @@ function playBlackjack() {
         }
     })
 }
+*/
 // call api
 
 // use api to play blackjack
