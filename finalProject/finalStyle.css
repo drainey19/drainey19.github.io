@@ -58,14 +58,14 @@ body {
 }
 
 #blankSpace {
-    flex: 0 1 25%;
+    flex: 0 1 30%;
     padding: 0%;
     margin: 0%;
 }
 
 /*base top*/
 #name {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     font-family: arcade;
     font-size: 35pt;
     text-align: center;
@@ -89,7 +89,7 @@ body {
 
 /*base middle*/
 #games {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     text-align: center;
     /*
     min-height: 550px;
@@ -129,7 +129,7 @@ body {
 /*base bottom*/
 #coin {
     border: 2px solid red;
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     /*
     min-height: 320px;
     max-width: 780px;
