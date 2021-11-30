@@ -9,8 +9,8 @@
 }
 
 @keyframes startBlink {
-    0% {color: white;}
-    50% {color: #121212;}
+    0% {color: #121212;}
+    /*50% {color: #121212;}*/
     100% {color: white;}
 }
 
