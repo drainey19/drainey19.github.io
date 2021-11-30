@@ -8,6 +8,12 @@
     src: url(PressStart2P.ttf);
 }
 
+@keyframes startBlink {
+    0% {color: white;}
+    50% {color: #121212;}
+    100% {color: white;}
+}
+
 
 body {
     background-image: 
@@ -139,6 +145,9 @@ body {
 #pressStart {
     padding-top: 25%;
     font-family: pressStart;
+    animation-name: startBlink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #displayGameList {
