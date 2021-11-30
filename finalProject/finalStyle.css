@@ -8,6 +8,7 @@
     src: url(PressStart2P.ttf);
 }
 
+
 body {
     background-image: 
     linear-gradient(
@@ -32,30 +33,42 @@ body {
 
 #title {
     flex: 0 1 10%;
+    padding: 0%;
+    margin: 0%;
 }
 
 #gameSpace {
     flex: 0 1 30%;
+    padding: 0%;
+    margin: 0%;
 }
 
 #gameBody {
     flex: 0 1 60%;
+    padding: 0%;
+    margin: 0%;
 }
 
 /*title*/
 #container1 {
     display: flex;
     flex-direction: row;
+    padding: 0%;
+    margin: 0%;
 }
 
 #blankSpace {
-    flex: 0 1 30%;
+    flex: 0 1 25%;
+    background-color: lightseagreen;
+    padding: 0%;
+    margin: 0%;
 }
 
+/*base top*/
 #name {
-    flex: 0 1 40%;
+    flex: 0 1 50%;
     font-family: arcade;
-    font-size: 45pt;
+    font-size: 35pt;
     text-align: center;
     background-color: black;
     color: white;
@@ -64,6 +77,9 @@ body {
     padding: 0%;
     margin: 0%;
     padding-bottom: 5px;
+    /*max-height: 125px;*/
+    width: 50%;
+    height: 15%;
 }
 
 /*game*/
@@ -72,25 +88,36 @@ body {
     flex-direction: row;
 }
 
+/*base middle*/
 #games {
-    flex: 0 1 40%;
+    flex: 0 1 50%;
     text-align: center;
     /*
     min-height: 550px;
     max-height: 550px;
-    */
+    
     background-image: url("screen.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 550px;
+    */
+    /*min-height: 345px;*/
+    width: 50%;
+    height: 60%;
+    border: 2px solid red;
+    padding: 0%;
+    margin: 0%;
 }
 
 #blankScreen {
+    border: 2px solid blue;
+    /*
     background-color: #121212;
     max-width: 650px;
+    max-height: 350px;
     margin: 50px;
-    
+    border: 2px solid red;
+    */
 }
 
 /*box*/
@@ -99,19 +126,40 @@ body {
     flex-direction: row;
 }
 
+/*base bottom*/
 #coin {
-    flex: 0 1 40%;
+    border: 2px solid red;
+    flex: 0 1 50%;
+    /*
     min-height: 320px;
     max-width: 780px;
     background-color: black;
+    */
+    width: 50%;
+    height: 25%;
 }
 
 #joyStick {
-    max-width: 450px;
+    max-width: 35%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 5%;
 }
 
 /*other stuff*/
 #startBTN {
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-family: pressStart;
+    color: white;
+    background-color: red;
+    float: right;
+    height: 80px;
+    width: 80px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    /*
     background-color: red;
     float: right;
     margin-top: 100px;
@@ -121,34 +169,42 @@ body {
     color: white;
     height: 80px;
     width: 80px;
+    */
 }
 
 #pressStart {
+    border: 2px solid blue;
     /*background-color: #121212;*/
+    /*
     max-width: 800px;
     min-height: 475px;
     font-family: pressStart;
+    */
 }
 
 #start {
+    /*
     text-align: center;
     padding: 200px;
+    */
 }
 
 #displayGameList, #blackjack, #snakeGame, #oregonTrail {
     background-color: #121212;
+    /*
     max-width: 800px;
     min-height: 450px;
- 
 
     text-align: center;
-    border-radius: 8px;
+    */
+    /*border-radius: 8px;*/
 }
 
 #displayGameList, button {
     font-family: pressStart;
 }
 
+/*
 #wagon {
     float: left;
     padding-top: 5px;
@@ -160,6 +216,7 @@ body {
     padding-top: 5px;
     padding-right: 15px;
 }
+*/
 
 /*
 @font-face {
