@@ -103,15 +103,13 @@ body {
     /*min-height: 345px;*/
     width: 50%;
     height: 60%;
-    border: 2px solid red;
     padding: 0%;
     margin: 0%;
 }
 
 #blankScreen {
-    border: 2px solid blue;
     background-color: #121212;
-    height: 450px;
+    height: 400px;
     /*
     max-width: 650px;
     max-height: 350px;
@@ -128,15 +126,14 @@ body {
 
 /*base bottom*/
 #coin {
-    border: 2px solid red;
     flex: 0 1 40%;
     /*
     min-height: 320px;
     max-width: 780px;
     */
-    background-color: black;
+    background-color: #0D0D0D;
     width: 50%;
-    height: 25%;
+    height: 200px;
 }
 
 #joyStick {
@@ -148,7 +145,6 @@ body {
 
 /*other stuff*/
 #startBTN {
-    border: 2px solid blue;
     border-radius: 50%;
     font-family: pressStart;
     color: white;
@@ -156,7 +152,7 @@ body {
     float: right;
     height: 80px;
     width: 80px;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
     margin-right: 5%;
     /*
@@ -173,13 +169,13 @@ body {
 }
 
 #pressStart {
-    border: 2px solid blue;
+    padding-top: 25%;
     /*background-color: #121212;*/
     /*
     max-width: 800px;
     min-height: 475px;
-    font-family: pressStart;
     */
+    font-family: pressStart;
 }
 
 #start {
@@ -187,6 +183,10 @@ body {
     text-align: center;
     padding: 200px;
     */
+}
+
+#displayGameList {
+    padding-top: 20%;
 }
 
 #displayGameList, #blackjack, #snakeGame, #oregonTrail {
