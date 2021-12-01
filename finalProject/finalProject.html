@@ -15,10 +15,10 @@
             <div id="container1">
                 <p id="blankSpace"></p>
                 <h1 id="name">
-                    <img src="playingCards/AS.png" id="ace" height="60px">
+                    <!--<img src="playingCards/AS.png" id="ace" height="60px">-->
                     Dylan's
                     Arcade
-                    <img src="playingCards/JS.png" id="jack" height="60px">
+                    <!--<img src="playingCards/JS.png" id="jack" height="60px">-->
                 </h1>
                 <p id="blankSpace"></p>
             </div>
@@ -33,27 +33,41 @@
                             <div id="pressStart"><h2 id="start">PRESS START</h2></div>
                         </div>
 
+                        <!--oregon trail-->
                         <div id="oregonTrail" style="display: none;">
                             <embed src="https://archive.org/embed/msdos_Oregon_Trail_The_1990" height="400" width="550">
                         </div>
         
-                        
+                        <!--snake game-->
                         <div id="snakeGame" style="display: none;">
                             <canvas id="snakeCanvas" height="400" width="550">
         
                             </canvas>
                         </div>
                         
+                        <!--blackjack-->
                         <div id="blackjack" style="display: none;" height="400" width="550">
-                            <div id="players"></div>
+                            <div id="house">
+                                Dealers hand
+                                <!--display cards-->
+                                <!--display total-->
+                            </div>
+                            <div id="player">
+                                player
+                                <!--display cards-->
+                                <!--display total-->
+                            </div>
+                            <!--maybe add another player?-->
                             <button onclick="">hit</button>
                             <button onclick="">stand</button>
                         </div>
 
+                        <!--minesweeper-->
                         <div id="minesweeper" style="display: none;" height="400" width="550">
 
                         </div>
 
+                        <!--display forza car-->
                         <div id="forzaCar" style="display: none;" height="400" width="550">
                             <img id="pic">
                         </div>
@@ -70,7 +84,7 @@
                                 <button onClick="playSnakeGame()">Snake Game</button><br>
                                 <button onclick="playBlackjack()">Blackjack</button><br>
                                 <button onclick="playMinesweeper()">Minesweeper</button><br>
-                                <button onclick="forzaCar()">free games</button><br>
+                                <button onclick="forzaCar()">forza car pictures</button><br>
                                 <button onclick="card()">True Beauty</button>
                             </div>
                         </div>

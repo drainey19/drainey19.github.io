@@ -44,14 +44,10 @@ function players(num) {
 }
 
 //display players
-function playerDisplay() {
-    
-}
+
 
 // start the game
 function playBlackjack() {
-    $("#snakeGame").hide();
-    $("#oregonTrail").hide();
     $("#displayGameList").hide();
     $("#blackjack").show();
     createDeck();
@@ -60,7 +56,9 @@ function playBlackjack() {
 }
 
 // deal the hand
+function dealCards() {
 
+}
 
 // render cards
 
@@ -71,11 +69,20 @@ function playBlackjack() {
 //update points
 
 // hit
+function hit() {
+
+}
 
 
 // stay
+function stay() {
+
+}
 
 // display winner
+function results() {
+
+}
 
 //check
 
