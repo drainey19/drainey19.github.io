@@ -6,6 +6,7 @@ function gameList() {
     $("#oregonTrail").hide();
     $("#minesweeper").hide();
     $("#pressStart").hide();
+    $("#forzaCar").hide();
 }
 
 // play oregin trail game
@@ -33,10 +34,12 @@ function playMinesweeper() {
     $("#displayGameList").hide();
     $("#snakeGmae").hide();
     $("#minesweeper").show();
+    minesweeper();
 }
 
 // minesweeper api
 function minesweeper() {
+    
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -50,7 +53,42 @@ function minesweeper() {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
+        document.getElementById("minesweeper").innerHTML = response;
+        console.log("I am here");
     });
+}
+
+//free to play game list
+let requestData;
+
+
+function forzaCar() {
+    $("#oregonTrail").hide();
+    $("#blackjack").hide();
+    $("#displayGameList").hide();
+    $("#snakeGmae").hide();
+    $("#minesweeper").hide();
+    $("#forzaCar").show();
+    $.ajax({
+        url: "https://forza-api.tk/", 
+        method: "GET",
+        data: requestData,
+        dataType: "json"
+    }).done(function(data) {
+        $('#forzaCar').html("<img src=\"" + data["image"] + "\">");
+        console.log(data);
+        return data; 
+    });
+}
+
+function card() {
+    $("#oregonTrail").hide();
+    $("#blackjack").hide();
+    $("#displayGameList").hide();
+    $("#snakeGmae").hide();
+    $("#minesweeper").hide();
+    $("#forzaCar").hide();
+    $("#cards").show();
 }
 
 /*

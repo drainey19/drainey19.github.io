@@ -15,10 +15,10 @@
             <div id="container1">
                 <p id="blankSpace"></p>
                 <h1 id="name">
-                    <!--<img src="wagon.png" id="wagon" height="75px">-->
+                    <img src="playingCards/AS.png" id="ace" height="60px">
                     Dylan's
                     Arcade
-                    <!--<img src="snake.png" id="snakePic" height="75px">-->
+                    <img src="playingCards/JS.png" id="jack" height="60px">
                 </h1>
                 <p id="blankSpace"></p>
             </div>
@@ -45,11 +45,22 @@
                         </div>
                         
                         <div id="blackjack" style="display: none;" height="400" width="550">
-
+                            <div id="players"></div>
+                            <button onclick="">hit</button>
+                            <button onclick="">stand</button>
                         </div>
 
                         <div id="minesweeper" style="display: none;" height="400" width="550">
 
+                        </div>
+
+                        <div id="forzaCar" style="display: none;" height="400" width="550">
+                            <img id="pic">
+                        </div>
+
+                        <div id="cards" style="display: none;" height="400" width="550">
+                            <img src="playingCards/KH.png" height="400">
+                            <img src="playingCards/AH.png" height="400">
                         </div>
 
                         <div id="displayGameList" style="display: none;">
@@ -58,7 +69,9 @@
                                 <button onclick="playOregonTrail()">Oregon Trail</button><br>
                                 <button onClick="playSnakeGame()">Snake Game</button><br>
                                 <button onclick="playBlackjack()">Blackjack</button><br>
-                                <button onclick="playMinesweeper()">Minesweeper</button>
+                                <button onclick="playMinesweeper()">Minesweeper</button><br>
+                                <button onclick="forzaCar()">free games</button><br>
+                                <button onclick="card()">True Beauty</button>
                             </div>
                         </div>
                     </div>

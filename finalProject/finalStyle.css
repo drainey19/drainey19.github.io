@@ -82,6 +82,7 @@ body {
     padding: 0%;
     margin: 0%;
     padding-bottom: 5px;
+    padding-top: .5%;
     width: 50%;
     height: 15%;
 }
@@ -160,4 +161,16 @@ body {
 
 #displayGameList, button {
     font-family: pressStart;
+}
+
+#ace {
+    float: left;
+    padding-left: 5%;
+    padding-top: .5%;
+}
+
+#jack {
+    float: right;
+    padding-right: 5%;
+    padding-top: .5%;
 }
