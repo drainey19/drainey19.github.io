@@ -7,39 +7,32 @@ function gameList() {
     $("#minesweeper").hide();
     $("#pressStart").hide();
     $("#forzaCar").hide();
+    $("#cards").hide();
 }
 
 // play oregin trail game
 function playOregonTrail() {
-    $("#snakeGame").hide();
-    $("#blackjack").hide();
     $("#displayGameList").hide();
-    $("#minesweeper").hide();
     $("#oregonTrail").show();
 }
 
 // play snake game
 function playSnakeGame() {
-    $("#oregonTrail").hide();
-    $("#blackjack").hide();
     $("#displayGameList").hide();
-    $("#minesweeper").hide();
     $("#snakeGame").show();
 }
 
 //play minesweeper
 function playMinesweeper() {
-    $("#oregonTrail").hide();
-    $("#blackjack").hide();
     $("#displayGameList").hide();
-    $("#snakeGmae").hide();
     $("#minesweeper").show();
     minesweeper();
 }
 
 // minesweeper api
 function minesweeper() {
-    
+    $("#displayGameList").hide();
+
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -63,11 +56,8 @@ let requestData;
 
 
 function forzaCar() {
-    $("#oregonTrail").hide();
-    $("#blackjack").hide();
     $("#displayGameList").hide();
-    $("#snakeGmae").hide();
-    $("#minesweeper").hide();
+
     $("#forzaCar").show();
     $.ajax({
         url: "https://forza-api.tk/", 
@@ -82,12 +72,7 @@ function forzaCar() {
 }
 
 function card() {
-    $("#oregonTrail").hide();
-    $("#blackjack").hide();
     $("#displayGameList").hide();
-    $("#snakeGmae").hide();
-    $("#minesweeper").hide();
-    $("#forzaCar").hide();
     $("#cards").show();
 }
 
