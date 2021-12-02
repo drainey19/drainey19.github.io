@@ -203,11 +203,11 @@ function points() {
 function dPoints() {
     var dtotal = 0;
      for (i = 0; i < dealerHand.length; i++) {
-         console.log("val: " + dealerHand[i].val);
+         //console.log("val: " + dealerHand[i].val);
          dtotal += dealerHand[i].Val;
      }
      document.getElementById("dealerTotal").innerHTML = "Total: " + dtotal;
-     check(dtotal);
+     dcheck(dtotal);
      dealersMove(dtotal);
      var dFinalPoints = dtotal;
      return dFinalPoints;
@@ -245,6 +245,10 @@ function dealersMove(total) {
         dPoints();
         console.log("I am here");
         displayDealerCards(j, 1);
+
+        var nums = 0;
+        nums =  nums + 1;
+        console.log("Times ran: " + nums)
     }
     else if (total > 21) {
         console.log("bust")
@@ -300,12 +304,13 @@ function check(total) {
     if (total > 21) {
         document.getElementById("hitBTN").disabled = true;
         $("#bust").show();
+        stand();
     }
 }
 
 function dcheck(dtotal) {
-    if (total > 21) {
-
+    if (dtotal > 21) {
+        console.log("dealer bust");
     }
 }
 
