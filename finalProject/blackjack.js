@@ -1,22 +1,41 @@
 //create card deck
-var suites = ["heart", "dimond", "spades", "clubs"];
-var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+var suites = ["H", "D", "S", "C"];
+var values = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"];
+/*
+var cardImage = [
+    "2H.png", "2D.png", "2S.png", "2C.png",
+    "3H.png", "3D.png", "3S.png", "3C.png",
+    "4H.png", "4D.png", "4S.png", "4C.png",
+    "5H.png", "5D.png", "5S.png", "5C.png",
+    "6H.png", "6D.png", "6S.png", "6C.png",
+    "7H.png", "7D.png", "7S.png", "7C.png",
+    "8H.png", "8D.png", "8S.png", "8C.png",
+    "9H.png", "9D.png", "9S.png", "9C.png",
+    "TH.png", "TD.png", "TS.png", "TC.png",
+    "JH.png", "JD.png", "JS.png", "JC.png",
+    "QH.png", "QD.png", "QS.png", "QC.png",
+    "KH.png", "KD.png", "KS.png", "KC.png",
+    "AH.png", "AD.png", "AS.png", "AC.png"
+];
+*/
 var deck = new Array();
-var denck = new Array();
+//var players = new Array();
+var playerHand = new Array();
+var dealerHand = new Array();
 
 function createDeck() {
     deck = new Array();
     for (i = 0; i < values.length; i++) {
-        for (x = 0; x < suites.length; x++) {
+        for (j = 0; j < suites.length; j++) {
             // set face cards equal to 10
-            var num = parseInt(values[i]);
-            if (values[i] == "J" || values == "Q" || values[i] == "K") {
-                num = 10;
+            var cardVal = parseInt(values[i]);
+            if (values[i] == "T" || values[i] == "J" || values[i] == "Q" || values[i] == "K") {
+                cardVal = 10;
             }
             else if (values[i] == "A") {
-                num = 11;
+                cardVal = 11;
             }
-            let card = {values: values[i], suites: suites[x]}
+            let card = {values: values[i], suites: suites[j], cardImage: "playingCards/" + values[i] + suites[j] + ".png", Val: cardVal}
             deck.push(card);
         }
     }
@@ -25,57 +44,152 @@ function createDeck() {
 
 function shuffle() {
     for (var i = 0; i < 300; i++) {
-        var x = Math.floor((Math.random * deck.length));
-        var y = Math.floor((Math.random * deck.length));
-        var temp = deck[x];
-        deck[x] = deck[y];
-        deck[y] = temp;
+        var j = Math.floor((Math.random() * deck.length));
+        var k = Math.floor((Math.random() * deck.length));
+        var temp = deck[j];
+
+        deck[j] = deck[k];
+        deck[k] = temp;
     }
 }
 
 // create players
-function players(num) {
-    players = new Array();
-    for (i = 1; 1 >= 0; i++) {
+/*
+function createPlayers(num) {
+    var players = new Array();
+    for (i = 1; i >= 0; i++) {
         var hand = new Array();
         var player = {name: "Player " + i, Id: i, Hand: hand};
         players.push(player);
     }
+}*/
+
+function createHand() {
+    for (i = 0; i < 2; i++) {
+        var j = deck.pop();
+        playerHand.push(j);
+        var k = deck.pop();
+        dealerHand.push(k);
+    }
+    displayPlayerCards(0);
+    displayDealerCards();
+    points();
 }
 
-//display players
 
+function startBlackjack() {
+    $("#startBlackjack").hide();
+    $("#blackjackGame").show();
+    createDeck();
+    shuffle();
+    createHand();
 
+    console.log(deck);
+    console.log(playerHand);
+    console.log(dealerHand);
+}
 // start the game
 function playBlackjack() {
     $("#displayGameList").hide();
     $("#blackjack").show();
+    document.getElementById("hitBTN").disabled = false;
+    clearBoard();
     createDeck();
     shuffle();
+    createHand();
+
     console.log(deck);
+    console.log(playerHand);
+    console.log(dealerHand);
+    /*
+    var img = document.createElement("img");
+    img.src = deck[36].cardImage;
+    img.height = 150;
+
+    var div = document.getElementById("player");
+    div.appendChild(img);
+
+    var img = document.createElement("img");
+    img.src = deck[50].cardImage;
+    img.height = 150;
+
+    var div = document.getElementById("player");
+    div.appendChild(img);
+    //document.getElementById("player").innerHTML = deck[0];
+    var img = document.createElement("img");
+    img.src = deck[42].cardImage;
+    img.height = 150;
+
+    var div = document.getElementById("house");
+    div.appendChild(img);
+    */
 }
 
-// deal the hand
-function dealCards() {
-
+// display the cards
+function displayPlayerCards(cardsOut) {
+    console.log("test2: " + playerHand.length)
+    for (i = cardsOut; i < playerHand.length; i++) {
+        //var img = document.createElement("img");
+        //img.appendChild()
+        var img = document.createElement("img");
+        img.src = playerHand[i].cardImage;
+        img.height = 100;
+    
+        var div = document.getElementById("playerCards");
+        div.appendChild(img);
+    }
 }
 
-// render cards
+function displayDealerCards() {
+    var img = document.createElement("img");
+    img.src = dealerHand[0].cardImage;
+    img.height = 100;
 
-// get card UI
+    var div = document.getElementById("dealerCards");
+    div.appendChild(img);
+
+    var img = document.createElement("img");
+    img.src = "playingCards/_back.png";
+    img.height = 100;
+
+    var div = document.getElementById("dealerCards");
+    div.appendChild(img);
+}
 
 //get points
+function points() {
+     var total = 0;
+     for (i = 0; i < playerHand.length; i++) {
+         total += playerHand[i].Val;
+     }
+     console.log("total: " + total);
+     updatePoints(total);
+     check(total);
+     return total;
+}
 
 //update points
+function updatePoints(total) {
+    document.getElementById("playerTotal").innerHTML = "Total: " + total;
+}
 
 // hit
 function hit() {
-
+    var i = playerHand.length;
+    var j = deck.pop();
+    playerHand.push(j);
+    points();
+    displayPlayerCards(i);
 }
 
+// stand
+function stand() {
+    dealersMove();
+    
+}
 
-// stay
-function stay() {
+// dealers turn
+function dealersMove() {
 
 }
 
@@ -85,5 +199,22 @@ function results() {
 }
 
 //check
+function check(total) {
+    console.log("I am here: " + total);
+    if (total > 21) {
+        document.getElementById("hitBTN").disabled = true;
+        $("#bust").show();
+    }
+}
 
 //update deck
+
+//clear board
+function clearBoard() {
+    deck.length = 0;
+    playerHand.length = 0;
+    dealerHand.length = 0;
+    document.getElementById("playerCards").innerHTML = "";
+    document.getElementById("dealerCards").innerHTML = "";
+    document.getElementById("playerTotal").innerHTML = "";
+}

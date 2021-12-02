@@ -30,6 +30,7 @@ function playMinesweeper() {
 }
 
 // minesweeper api
+/*
 function minesweeper() {
     $("#displayGameList").hide();
 
@@ -50,6 +51,7 @@ function minesweeper() {
         console.log("I am here");
     });
 }
+*/
 
 //free to play game list
 let requestData;

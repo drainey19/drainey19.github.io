@@ -165,7 +165,7 @@ body {
 #displayGameList, button {
     font-family: pressStart;
 }
-
+/*
 #ace {
     float: left;
     padding-left: 5%;
@@ -177,12 +177,27 @@ body {
     padding-right: 5%;
     padding-top: .5%;
 }
+*/
 
 #blackjack, #cards {
     background-image: url("greenTable.jpeg");
+    background-size: 100%;
     height: 100%;
 }
 
 #pic {
     max-width: auto;
+}
+
+#blackjackBTN {
+    height: 40px;
+}
+
+/*blackjack*/
+#player img {
+    padding: 0 5px 0;
+}
+
+#dealer img {
+    padding: 0 5px 0;
 }

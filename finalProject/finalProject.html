@@ -47,19 +47,25 @@
                         
                         <!--blackjack-->
                         <div id="blackjack" style="display: none;" height="400" width="550">
-                            <div id="house">
-                                Dealers hand
+                            <div id="dealer">
+                                Dealers hand<br>
                                 <!--display cards-->
+                                <div id="dealerCards"></div>
                                 <!--display total-->
+                                <p id="dealerTotal"></p>
                             </div>
                             <div id="player">
-                                player
+                                player<br>
                                 <!--display cards-->
+                                <div id="playerCards"></div>
                                 <!--display total-->
+                                <p id="playerTotal"></p>
+                                <p id="bust" style="display: none;">Bust</p>
                             </div>
                             <!--maybe add another player?-->
-                            <button onclick="">hit</button>
-                            <button onclick="">stand</button>
+                            <button id="hitBTN" onclick="hit()">hit</button>
+                            <button onclick="stand()">stand</button><br>
+                            <button onclick="playBlackjack()">new deal</button>
                         </div>
 
                         <!--minesweeper-->
@@ -82,9 +88,9 @@
                             <div id="gameList">
                                 <button onclick="playOregonTrail()">Oregon Trail</button><br>
                                 <button onClick="playSnakeGame()">Snake Game</button><br>
-                                <button onclick="playBlackjack()">Blackjack</button><br>
-                                <button onclick="playMinesweeper()">Minesweeper</button><br>
-                                <button onclick="forzaCar()">forza car pictures</button><br>
+                                <button onclick="playBlackjack()" id="blackjackBTN">Blackjack</button><br>
+                                <!--<button onclick="playMinesweeper()">Minesweeper</button><br>-->
+                                <!--<button onclick="forzaCar()">forza car pictures</button><br>-->
                                 <button onclick="card()">True Beauty</button>
                             </div>
                         </div>
