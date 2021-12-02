@@ -72,11 +72,11 @@ function createHand() {
         dealerHand.push(k);
     }
     displayPlayerCards(0);
-    displayDealerCards();
+    displayDealerCards(0);
     points();
 }
 
-
+/*
 function startBlackjack() {
     $("#startBlackjack").hide();
     $("#blackjackGame").show();
@@ -88,9 +88,11 @@ function startBlackjack() {
     console.log(playerHand);
     console.log(dealerHand);
 }
+*/
 // start the game
 function playBlackjack() {
     $("#displayGameList").hide();
+    $("#bust").hide();
     $("#blackjack").show();
     document.getElementById("hitBTN").disabled = false;
     clearBoard();
@@ -98,8 +100,8 @@ function playBlackjack() {
     shuffle();
     createHand();
 
-    console.log(deck);
-    console.log(playerHand);
+    //console.log(deck);
+    //console.log(playerHand);
     console.log(dealerHand);
     /*
     var img = document.createElement("img");
@@ -127,7 +129,7 @@ function playBlackjack() {
 
 // display the cards
 function displayPlayerCards(cardsOut) {
-    console.log("test2: " + playerHand.length)
+    //console.log("test2: " + playerHand.length)
     for (i = cardsOut; i < playerHand.length; i++) {
         //var img = document.createElement("img");
         //img.appendChild()
@@ -140,20 +142,46 @@ function displayPlayerCards(cardsOut) {
     }
 }
 
-function displayDealerCards() {
-    var img = document.createElement("img");
-    img.src = dealerHand[0].cardImage;
-    img.height = 100;
+function displayDealerCards(numCards, start) {
+    if (start != 1) {
+        $("#dealerCards2").hide();
+        $("#dealerCards").show();
+        var img = document.createElement("img");
+        img.src = dealerHand[0].cardImage;
+        img.height = 100;
+    
+        var div = document.getElementById("dealerCards");
+        div.appendChild(img);
+    
+        var img = document.createElement("img");
+        img.src = "./playingCards/_back.png";
+        img.height = 100;
+    
+        var div = document.getElementById("dealerCards");
+        div.appendChild(img);
 
-    var div = document.getElementById("dealerCards");
-    div.appendChild(img);
+        document.getElementById("dealerTotal").innerHTML = "Total: ?";
+    }
+    else {
+        $("#dealerCards").hide();
+        $("#dealerCards2").show();
+        console.log("length: " + dealerHand.length);
+        console.log(dealerHand);
+        for (i = numCards; i < dealerHand.length; i++) {
+            //var img = document.createElement("img");
+            //img.appendChild()
+            //dealerHand.filter();
+            var img = document.createElement("img");
+            img.src = dealerHand[i].cardImage;
+            img.height = 100;
+        
+            var div = document.getElementById("dealerCards2");
+            div.appendChild(img);
+        }
+        console.log("length2: " + dealerHand.length);
+        dPoints();
+    }
 
-    var img = document.createElement("img");
-    img.src = "playingCards/_back.png";
-    img.height = 100;
-
-    var div = document.getElementById("dealerCards");
-    div.appendChild(img);
 }
 
 //get points
@@ -161,17 +189,35 @@ function points() {
      var total = 0;
      for (i = 0; i < playerHand.length; i++) {
          total += playerHand[i].Val;
+         //console.log(playerHand[i].Val);
      }
      console.log("total: " + total);
-     updatePoints(total);
+     //updatePoints(total);
+     document.getElementById("playerTotal").innerHTML = "Total: " + total;
      check(total);
-     return total;
+     var pFinalPoints = total;
+     return pFinalPoints;
+}
+
+// dealers points
+function dPoints() {
+    var dtotal = 0;
+     for (i = 0; i < dealerHand.length; i++) {
+         console.log("val: " + dealerHand[i].val);
+         dtotal += dealerHand[i].Val;
+     }
+     document.getElementById("dealerTotal").innerHTML = "Total: " + dtotal;
+     check(dtotal);
+     dealersMove(dtotal);
+     var dFinalPoints = dtotal;
+     return dFinalPoints;
 }
 
 //update points
+/*
 function updatePoints(total) {
     document.getElementById("playerTotal").innerHTML = "Total: " + total;
-}
+}*/
 
 // hit
 function hit() {
@@ -184,26 +230,82 @@ function hit() {
 
 // stand
 function stand() {
-    dealersMove();
+    displayDealerCards(0, 1);
+    //dealersMove();
     
 }
 
 // dealers turn
-function dealersMove() {
-
+function dealersMove(total) {
+    console.log("test total: " + total);
+    if (total < 17) {
+        var j = dealerHand.length;
+        var k = deck.pop();
+        dealerHand.push(k);
+        dPoints();
+        console.log("I am here");
+        displayDealerCards(j, 1);
+    }
+    else if (total > 21) {
+        console.log("bust")
+    }
+    else {
+        //results();
+        console.log("hmmm");
+    }
+    /*
+    while (i < 1) {
+        if (total <= 16) {
+            var j = dealerHand.length;
+            var k = deck.pop();
+            dealerHand.push(k);
+            dPoints();
+            displayDealerCards(j);
+        }
+        else {
+            //results();
+            i++
+        }
+    }
+    */
 }
 
 // display winner
 function results() {
-
+    if (((21 - dFinalPoints) >= 0) && ((21 - pFinalPoints) < 0)) {
+        // dealer won
+        console.log("dealer won");
+        //player bust
+        console.log("player bust");
+    }
+    else if (((21 - dFinalPoints) < 0) && ((21 - pFinalPoints) >= 0)) {
+        //player  won
+        console.log("player won");
+        //dealer bust
+        console.log("dealer bust");
+    }
+    else if ((21 - dFinalPoints) < (21 - pFinalPoints)) {
+        // dealer won
+        console.log("dealer won");
+    }
+    else {
+        // player won
+        console.log("player won");
+    }
 }
 
 //check
 function check(total) {
-    console.log("I am here: " + total);
+    //console.log("I am here: " + total);
     if (total > 21) {
         document.getElementById("hitBTN").disabled = true;
         $("#bust").show();
+    }
+}
+
+function dcheck(dtotal) {
+    if (total > 21) {
+
     }
 }
 
@@ -216,5 +318,6 @@ function clearBoard() {
     dealerHand.length = 0;
     document.getElementById("playerCards").innerHTML = "";
     document.getElementById("dealerCards").innerHTML = "";
+    document.getElementById("dealerCards2").innerHTML = "";
     document.getElementById("playerTotal").innerHTML = "";
 }
