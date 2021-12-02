@@ -1,23 +1,7 @@
 //create card deck
 var suites = ["H", "D", "S", "C"];
 var values = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"];
-/*
-var cardImage = [
-    "2H.png", "2D.png", "2S.png", "2C.png",
-    "3H.png", "3D.png", "3S.png", "3C.png",
-    "4H.png", "4D.png", "4S.png", "4C.png",
-    "5H.png", "5D.png", "5S.png", "5C.png",
-    "6H.png", "6D.png", "6S.png", "6C.png",
-    "7H.png", "7D.png", "7S.png", "7C.png",
-    "8H.png", "8D.png", "8S.png", "8C.png",
-    "9H.png", "9D.png", "9S.png", "9C.png",
-    "TH.png", "TD.png", "TS.png", "TC.png",
-    "JH.png", "JD.png", "JS.png", "JC.png",
-    "QH.png", "QD.png", "QS.png", "QC.png",
-    "KH.png", "KD.png", "KS.png", "KC.png",
-    "AH.png", "AD.png", "AS.png", "AC.png"
-];
-*/
+
 var deck = new Array();
 //var players = new Array();
 var playerHand = new Array();
@@ -53,17 +37,6 @@ function shuffle() {
     }
 }
 
-// create players
-/*
-function createPlayers(num) {
-    var players = new Array();
-    for (i = 1; i >= 0; i++) {
-        var hand = new Array();
-        var player = {name: "Player " + i, Id: i, Hand: hand};
-        players.push(player);
-    }
-}*/
-
 function createHand() {
     for (i = 0; i < 2; i++) {
         var j = deck.pop();
@@ -76,19 +49,6 @@ function createHand() {
     points();
 }
 
-/*
-function startBlackjack() {
-    $("#startBlackjack").hide();
-    $("#blackjackGame").show();
-    createDeck();
-    shuffle();
-    createHand();
-
-    console.log(deck);
-    console.log(playerHand);
-    console.log(dealerHand);
-}
-*/
 // start the game
 function playBlackjack() {
     $("#displayGameList").hide();
@@ -105,28 +65,6 @@ function playBlackjack() {
     //console.log(deck);
     //console.log(playerHand);
     console.log(dealerHand);
-    /*
-    var img = document.createElement("img");
-    img.src = deck[36].cardImage;
-    img.height = 150;
-
-    var div = document.getElementById("player");
-    div.appendChild(img);
-
-    var img = document.createElement("img");
-    img.src = deck[50].cardImage;
-    img.height = 150;
-
-    var div = document.getElementById("player");
-    div.appendChild(img);
-    //document.getElementById("player").innerHTML = deck[0];
-    var img = document.createElement("img");
-    img.src = deck[42].cardImage;
-    img.height = 150;
-
-    var div = document.getElementById("house");
-    div.appendChild(img);
-    */
 }
 
 // display the cards
@@ -275,21 +213,6 @@ function dealersMove(total) {
         finalTotals();
         //console.log("hmmm");
     }
-    /*
-    while (i < 1) {
-        if (total <= 16) {
-            var j = dealerHand.length;
-            var k = deck.pop();
-            dealerHand.push(k);
-            dPoints();
-            displayDealerCards(j);
-        }
-        else {
-            //results();
-            i++
-        }
-    }
-    */
 }
 
 // display winner
@@ -343,7 +266,6 @@ function dcheck(dtotal) {
 }
 */
 
-//update deck
 
 //clear board
 function clearBoard() {
