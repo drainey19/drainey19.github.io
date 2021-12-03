@@ -155,7 +155,7 @@ body {
 }
 
 #displayGameList {
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 #displayGameList, #blackjack, #snakeGame, #oregonTrail {
@@ -164,6 +164,33 @@ body {
 
 #displayGameList, button {
     font-family: pressStart;
+}
+
+#gameSelect {
+    width: 50%;
+}
+
+#gameList button:hover {
+    width: 60%;
+    height: 50%;
+    font-size: large;
+    background-color: darkred;
+}
+
+.blackjack {
+    background-color: darkgreen;
+}
+
+.trail {
+    background-color: brown;
+}
+
+.snake { 
+    background-color: green;
+}
+
+.tile {
+    background-color: yellow;
 }
 /*
 #ace {
@@ -185,12 +212,12 @@ body {
     height: 100%;
 }
 
-#pic {
-    max-width: auto;
+#forzaCar img {
+    max-width: 100%;
 }
 
-#blackjackBTN {
-    height: 40px;
+#pic {
+    max-width: auto;
 }
 
 /*blackjack*/

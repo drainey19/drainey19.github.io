@@ -4,7 +4,7 @@ function gameList() {
     $("#snakeGame").hide();
     $("#blackjack").hide();
     $("#oregonTrail").hide();
-    $("#minesweeper").hide();
+    $("#2048").hide();
     $("#pressStart").hide();
     $("#forzaCar").hide();
     $("#cards").hide();
@@ -23,10 +23,9 @@ function playSnakeGame() {
 }
 
 //play minesweeper
-function playMinesweeper() {
+function play2048() {
     $("#displayGameList").hide();
-    $("#minesweeper").show();
-    minesweeper();
+    $("#2048").show();
 }
 
 // minesweeper api

@@ -62,7 +62,7 @@ function playBlackjack() {
     shuffle();
     createHand();
 
-    //console.log(deck);
+    console.log(deck);
     //console.log(playerHand);
     console.log(dealerHand);
 }
@@ -106,8 +106,8 @@ function displayDealerCards(numCards, start) {
     else {
         $("#dealerCards").hide();
         $("#dealerCards2").show();
-        console.log("dealer hand length: " + dealerHand.length);
-        console.log(dealerHand);
+        //console.log("dealer hand length: " + dealerHand.length);
+        //console.log(dealerHand);
         for (i = numCards; i < dealerHand.length; i++) {
             //var img = document.createElement("img");
             //img.appendChild()
@@ -118,8 +118,10 @@ function displayDealerCards(numCards, start) {
         
             var div = document.getElementById("dealerCards2");
             div.appendChild(img);
+            console.log("Hand: " + dealerHand[i].Val);
+            console.log("card image: " + dealerHand[i].cardImage);
         }
-        console.log("length2: " + dealerHand.length);
+        //console.log("length2: " + dealerHand.length);
         dPoints();
     }
 
@@ -132,7 +134,7 @@ function points() {
          total += playerHand[i].Val;
          //console.log(playerHand[i].Val);
      }
-     console.log("total: " + total);
+     //console.log("total: " + total);
      //updatePoints(total);
      document.getElementById("playerTotal").innerHTML = "Total: " + total;
      check(total);
@@ -163,7 +165,7 @@ function finalTotals() {
     for (j = 0; j < playerHand.length; j++) {
         finalPPoints += playerHand[j].Val;
     }
-    console.log("final Points: player: " + finalPPoints + " dealer: " + finalDPoints);
+    //console.log("final Points: player: " + finalPPoints + " dealer: " + finalDPoints);
     results(finalDPoints, finalPPoints);
 }
 
@@ -191,7 +193,7 @@ function stand() {
 
 // dealers turn
 function dealersMove(total) {
-    console.log("test total: " + total);
+    //console.log("test total: " + total);
     if (total < 17) {
         var j = dealerHand.length;
         var k = deck.pop();
@@ -205,7 +207,7 @@ function dealersMove(total) {
         //console.log("Times ran: " + nums)
     }
     else if (total > 21) {
-        console.log("bust: " + total);
+        //console.log("bust: " + total);
         finalTotals();
     }
     else {
@@ -221,30 +223,30 @@ function results(dResult, pResult) {
     if (((21 - dResult) >= 0) && ((21 - pResult) < 0)) {
         document.getElementById("winner").innerHTML = "Dealer wins!";
         // dealer won
-        console.log("dealer won");
+        //console.log("dealer won");
         //player bust
-        console.log("player bust");
+        //console.log("player bust");
     }
     else if (((21 - dResult) < 0) && ((21 - pResult) >= 0)) {
         document.getElementById("winner").innerHTML = "Player wins!";
         //player  won
-        console.log("player won");
+        //console.log("player won");
         //dealer bust
-        console.log("dealer bust");
+        //console.log("dealer bust");
     }
     else if ((21 - dResult) < (21 - pResult)) {
         // dealer won
-        console.log("dealer won");
+        //console.log("dealer won");
         document.getElementById("winner").innerHTML = "Dealer wins!";
     }
     else if ((21 - dResult) == (21 - pResult)) {
-        console.log("dealer wins...I think");
+        //console.log("dealer wins...I think");
         document.getElementById("winner").innerHTML = "Dealer wins...I think";
     }
     else {
         document.getElementById("winner").innerHTML = "Player wins!";
         // player won
-        console.log("player won");
+        //console.log("player won");
     }
 }
 
