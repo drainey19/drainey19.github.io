@@ -92,7 +92,7 @@ function displayDealerCards(numCards, start) {
         div.appendChild(img);
     
         var img = document.createElement("img");
-        img.src = "./_back.png";
+        img.src = "./back.png";
         //img.height = 100;
     
         var div = document.getElementById("dealerCards");
