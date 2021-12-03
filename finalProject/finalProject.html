@@ -7,6 +7,8 @@
     <title>Dylan's Archade</title>
     <link rel="icon" href="joystick.jpeg" type="image">
     <link rel="stylesheet" href="finalStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="anime.min.js"></script>
 </head>
 
 <body>
@@ -47,22 +49,25 @@
                         
                         <!--blackjack-->
                         <div id="blackjack" style="display: none;" height="400" width="550">
-                            <div id="dealer">
-                                Dealers hand<br>
-                                <!--display cards-->
-                                <div id="dealerCards" style="display: none;"></div>
-                                <div id="dealerCards2" style="display: none;"></div>
-                                <!--display total-->
-                                <p id="dealerTotal"></p>
-                            </div>
-                            <p id="winner"></p>
-                            <div id="player">
-                                player<br>
-                                <!--display cards-->
-                                <div id="playerCards"></div>
-                                <!--display total-->
-                                <p id="playerTotal"></p>
+                            <div id="players" height="400">
+                                <div id="player" height="300">
+                                    Player's Hand<br>
+                                    <!--display cards-->
+                                    <div id="playerCards"></div>
+                                    <!--display total-->
+                                    <p id="playerTotal"></p>
+                                </div>
+                                <p id="winner"> </p>
+                                <div id="dealer" height="300">
+                                    Dealer's Hand<br>
+                                    <!--display cards-->
+                                    <div id="dealerCards" style="display: none;"></div>
+                                    <div id="dealerCards2" style="display: none;"></div>
+                                    <!--display total-->
+                                    <p id="dealerTotal"></p>
+                                </div>
                                 
+
                             </div>
                             <!--maybe add another player?-->
                             <button id="hitBTN" onclick="hit()">hit</button>
@@ -76,24 +81,42 @@
                         </div>
 
                         <!--display forza car-->
+                        <!--
                         <div id="forzaCar" style="display: none;" height="400" width="550">
                             <img id="pic">
-                        </div>
+                        </div>-->
 
                         <div id="cards" style="display: none;" height="400" width="550">
                             <img src="playingCards/KH.png" height="400">
                             <img src="playingCards/AH.png" height="400">
                         </div>
 
+                        <!--jokes-->
+                        <div id="jokes" style="display: none;" height="400" width="550">
+                            <div id="jokesTitle">
+                                Jokes
+                            </div>
+                            <p>(click at your own risk)</p>
+                            <button onclick="getJoke2()">Joke</button>
+                            <button onclick="getJoke()">Programing Joke</button>
+                            <!--<button>Pun</button><br>
+                            <button>Random</button>-->
+                            <div id="displayJokes">
+                                <div id="output"></div>
+                                <div id="output2"></div>
+                            </div>
+                        </div>
+
                         <div id="displayGameList" style="display: none;" height="400" width="550">
                             <h2>Select a Game</h2>
                             <div id="gameList">
-                                <button onclick="playOregonTrail()">Oregon Trail</button><br>
-                                <button onClick="playSnakeGame()">Snake Game</button><br>
-                                <button onclick="playBlackjack()" id="blackjackBTN">Blackjack</button><br>
-                                <!--<button onclick="playMinesweeper()">Minesweeper</button><br>-->
-                                <!--<button onclick="forzaCar()">forza car pictures</button><br>-->
-                                <button onclick="card()">True Beauty</button>
+                                <button id="gameBTN" class="blackjack" onclick="playBlackjack()">Blackjack</button><br>
+                                <button id="gameBTN" class="trail" onclick="playOregonTrail()">Oregon Trail</button><br>
+                                <!--<button class="snake" onClick="playSnakeGame()">Snake Game</button><br>-->
+                                <!--<button id="gameBTN" class="tile" onclick="play2048()">2048</button><br>-->
+                                <!--<button class="forza" onclick="forzaCar()">forza car pictures</button><br>-->
+                                <button id="gameBTN" class="jokes" onclick="playJoke()">Jokes</button>
+                                <!--<button onclick="card()">True Beauty</button>-->
                             </div>
                         </div>
                     </div>
@@ -122,5 +145,4 @@
 
 <script src="finalScript.js"></script>
 <script src="blackjack.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>

@@ -1,12 +1,10 @@
-//create card deck
 var suites = ["H", "D", "S", "C"];
 var values = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"];
-
 var deck = new Array();
-//var players = new Array();
 var playerHand = new Array();
 var dealerHand = new Array();
 
+//create card deck
 function createDeck() {
     deck = new Array();
     for (i = 0; i < values.length; i++) {
@@ -26,6 +24,7 @@ function createDeck() {
     return deck;
 }
 
+//shuffle cards
 function shuffle() {
     for (var i = 0; i < 300; i++) {
         var j = Math.floor((Math.random() * deck.length));
@@ -37,6 +36,7 @@ function shuffle() {
     }
 }
 
+//create hand
 function createHand() {
     for (i = 0; i < 2; i++) {
         var j = deck.pop();
@@ -63,20 +63,17 @@ function playBlackjack() {
     createHand();
 
     console.log(deck);
-    //console.log(playerHand);
+    console.log(playerHand);
     console.log(dealerHand);
 }
 
 // display the cards
 function displayPlayerCards(cardsOut) {
-    //console.log("test2: " + playerHand.length)
     for (i = cardsOut; i < playerHand.length; i++) {
-        //var img = document.createElement("img");
-        //img.appendChild()
         var img = document.createElement("img");
         img.src = playerHand[i].cardImage;
         // rezize
-        img.height = 100;
+        //img.height = 100;
     
         var div = document.getElementById("playerCards");
         div.appendChild(img);
@@ -89,14 +86,14 @@ function displayDealerCards(numCards, start) {
         $("#dealerCards").show();
         var img = document.createElement("img");
         img.src = dealerHand[0].cardImage;
-        img.height = 100;
+        //img.height = 100;
     
         var div = document.getElementById("dealerCards");
         div.appendChild(img);
     
         var img = document.createElement("img");
-        img.src = "./playingCards/_back.png";
-        img.height = 100;
+        img.src = "_back.png";
+        //img.height = 100;
     
         var div = document.getElementById("dealerCards");
         div.appendChild(img);
@@ -106,15 +103,11 @@ function displayDealerCards(numCards, start) {
     else {
         $("#dealerCards").hide();
         $("#dealerCards2").show();
-        //console.log("dealer hand length: " + dealerHand.length);
-        //console.log(dealerHand);
+
         for (i = numCards; i < dealerHand.length; i++) {
-            //var img = document.createElement("img");
-            //img.appendChild()
-            //dealerHand.filter();
             var img = document.createElement("img");
             img.src = dealerHand[i].cardImage;
-            img.height = 100;
+            //img.height = 100;
         
             var div = document.getElementById("dealerCards2");
             div.appendChild(img);
@@ -222,6 +215,7 @@ function results(dResult, pResult) {
     //console.log("Now i am here!")
     if (((21 - dResult) >= 0) && ((21 - pResult) < 0)) {
         document.getElementById("winner").innerHTML = "Dealer wins!";
+        //$("#playerTotal")
         // dealer won
         //console.log("dealer won");
         //player bust

@@ -172,39 +172,40 @@ body {
 
 #gameList button:hover {
     width: 60%;
-    height: 50%;
+    height: 30px;
     font-size: large;
     background-color: darkred;
 }
 
 .blackjack {
     background-color: darkgreen;
+    width: 50%;
 }
 
 .trail {
     background-color: brown;
+    width: 50%;
 }
 
 .snake { 
     background-color: green;
+    width: 50%;
 }
 
 .tile {
     background-color: yellow;
-}
-/*
-#ace {
-    float: left;
-    padding-left: 5%;
-    padding-top: .5%;
+    width: 50%;
 }
 
-#jack {
-    float: right;
-    padding-right: 5%;
-    padding-top: .5%;
+.forza {
+    background-color: darkslateblue;
+    width: 50%;
 }
-*/
+
+.jokes {
+    background-color: lightblue;
+    width: 50%;
+}
 
 #blackjack, #cards {
     background-image: url("greenTable.jpeg");
@@ -212,19 +213,43 @@ body {
     height: 100%;
 }
 
-#forzaCar img {
-    max-width: 100%;
-}
-
-#pic {
-    max-width: auto;
-}
-
 /*blackjack*/
-#player img {
+#dealer img, #player img {
     padding: 0 5px 0;
 }
 
-#dealer img {
-    padding: 0 5px 0;
+/*blackjack card size*/
+#dealerCards img, #dealerCards2 img, #playerCards img {
+    width: 20%;
+}
+
+#players {
+    display: flex;
+    flex-direction: row;
+}
+
+#player {
+    flex: 0 1 50%;
+    padding: 1%;
+}
+
+#dealer {
+    flex: 0 1 50%;
+    padding: 1%;
+}
+
+
+
+#winner {
+    font-size: larger;
+}
+
+/*jokes*/
+#jokesTitle {
+    font-size: larger;
+}
+
+#displayJokes {
+    padding-top: 10%;
+    font-size: x-large;
 }

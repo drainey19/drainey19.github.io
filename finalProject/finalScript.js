@@ -7,7 +7,9 @@ function gameList() {
     $("#2048").hide();
     $("#pressStart").hide();
     $("#forzaCar").hide();
+    $("#jokes").hide();
     $("#cards").hide();
+    animation();
 }
 
 // play oregin trail game
@@ -28,33 +30,12 @@ function play2048() {
     $("#2048").show();
 }
 
-// minesweeper api
-/*
-function minesweeper() {
+function playJoke() {
     $("#displayGameList").hide();
-
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://minesweeper1.p.rapidapi.com/boards/new?r=1&c=1&bombs=1",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "minesweeper1.p.rapidapi.com",
-            "x-rapidapi-key": "ab6c19b129mshcacc10d5ea76639p14eb4fjsnb031d725f462"
-        }
-    };
-
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-        document.getElementById("minesweeper").innerHTML = response;
-        console.log("I am here");
-    });
+    $("#jokes").show();
 }
-*/
 
-//free to play game list
 let requestData;
-
 
 function forzaCar() {
     $("#displayGameList").hide();
@@ -77,71 +58,65 @@ function card() {
     $("#cards").show();
 }
 
-/*
-// draw bord
-const boardBackground = 'white';
-const boardBorder = 'black';
-const snakeColor = 'red';
-const snakeBorder = 'black';
-
-// create board
-const snakeBoard = document.getElementById("#snakeCanvas");
-const snakeContext = snakeBoard.getContext("2d");
-
-// create snake starting cordinates
-let snake = [
-    {x: 250, y: 250}, {x: 240, y: 250}, {x: 230, y:250}, {x: 220, y: 250}, {x:210,y:250},
-];
-
-// start game
-main();
-
-// Keeps the game going
-function main() {
-    drawCanvas();
-    drawSnake();
-}
-
-function drawCanvas() {
-    snakeContext.fillStyle = boardBackground;
-    snakeContext.styleStroke = boardBorder;
-    snakeContext.fillRect(0, 0, snakeBoard.width, snakeBoard.height);
-    snakeContext.strokeRect(0, 0, snakeBoard.width, snakeBoard.height);
-}
-
-// function to draw the snake
-function drawSnake() {
-    snake.foreach(drawSnakePart);
-}
-
-// function for each snake part
-function drawSnakePart(snakePart) {
-    snakeContext.fillStyle = snakeColor;
-    snakeContext.styleStroke = snakeBorder;
-    snakeContext.fillRect(snakePart, snakePart, 10, 10);
-}
-
-// make snake move automatically
-*/
-
-// api
-// playing card api make blackjack
-/*
-function playBlackjack() {
-    $("#snakeGame").hide();
-    $("#oregonTrail").hide();
-    $("#displayGameList").hide();
-    $("#blackjack").show();
-
-    $.ajax({
-        url: "http://deckofcardsapi.com/api/",
-        method: "GET",
-        data: {
-
+function getJoke() {
+    $("#output").hide();
+    $("#output2").hide();
+    $.get("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit",
+    function(data) {
+        console.log(data);;
+        if (data.type == "single") {
+            $("#output").show();
+            document.getElementById("output").innerHTML = data.joke;
         }
-    })
+        else if (data.type == "twopart") {
+            $("#output").show();
+            document.getElementById("output").innerHTML = data.setup;
+            $("#output2").show();
+            document.getElementById("output2").innerHTML = data.delivery;
+        }
+        else {
+            $("#output").show();
+            document.getElementById("output").innerHTML = "please try again";
+        }
+    });
+}
+
+function getJoke2() {
+    $("#output").hide();
+    $("#output2").hide();
+    $.get("https://v2.jokeapi.dev/joke/Miscellaneous,Pun,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit",
+    function(data) {
+        console.log(data);;
+        if (data.type == "single") {
+            $("#output").show();
+            document.getElementById("output").innerHTML = data.joke;
+        }
+        else if (data.type == "twopart") {
+            $("#output").show();
+            document.getElementById("output").innerHTML = data.setup;
+            $("#output2").show();
+            document.getElementById("output2").innerHTML = data.delivery;
+        }
+        else {
+            $("#output").show();
+            document.getElementById("output").innerHTML = "please try again";
+        }
+    });
+}
+
+//animate
+/*
+function animation() {
+    anime({
+        targets: "#gameBTN",
+        translatex: 250,
+        rotatez: 360,
+        duration: 3000
+    });
+    anime({
+        targets: '#gameBTN',
+        translateX: 270,
+        delay: anime.stagger(100) // increase delay by 100ms for each elements.
+      });
 }
 */
-// call api
-
-// use api to play blackjack
