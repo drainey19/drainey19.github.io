@@ -6,7 +6,6 @@ function gameList() {
     $("#oregonTrail").hide();
     $("#2048").hide();
     $("#pressStart").hide();
-    $("#forzaCar").hide();
     $("#jokes").hide();
     $("#cards").hide();
     animation();
@@ -24,7 +23,7 @@ function playSnakeGame() {
     $("#snakeGame").show();
 }
 
-//play minesweeper
+//play 2048
 function play2048() {
     $("#displayGameList").hide();
     $("#2048").show();
@@ -33,29 +32,6 @@ function play2048() {
 function playJoke() {
     $("#displayGameList").hide();
     $("#jokes").show();
-}
-
-let requestData;
-
-function forzaCar() {
-    $("#displayGameList").hide();
-
-    $("#forzaCar").show();
-    $.ajax({
-        url: "https://forza-api.tk/", 
-        method: "GET",
-        data: requestData,
-        dataType: "json"
-    }).done(function(data) {
-        $('#forzaCar').html("<img src=\"" + data["image"] + "\">");
-        console.log(data);
-        return data; 
-    });
-}
-
-function card() {
-    $("#displayGameList").hide();
-    $("#cards").show();
 }
 
 function getJoke() {
