@@ -81,18 +81,11 @@ function getJoke2() {
 }
 
 //animate
-/*
+
 function animation() {
     anime({
-        targets: "#gameBTN",
-        translatex: 250,
-        rotatez: 360,
-        duration: 3000
-    });
-    anime({
         targets: '#gameBTN',
-        translateX: 270,
+        translateX: 150,
         delay: anime.stagger(100) // increase delay by 100ms for each elements.
       });
 }
-*/

@@ -147,7 +147,7 @@ body {
 }
 
 #pressStart {
-    padding-top: 25%;
+    padding-top: 22%;
     font-family: pressStart;
     animation-name: startBlink;
     animation-duration: 1.5s;
@@ -166,9 +166,12 @@ body {
     font-family: pressStart;
 }
 
-#gameSelect {
-    width: 50%;
+#gameList {
+    text-align: center;
+    float: left;
+    width: 60%;
 }
+
 
 #gameList button:hover {
     width: 60%;
